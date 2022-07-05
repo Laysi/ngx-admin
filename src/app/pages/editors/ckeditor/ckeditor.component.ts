@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-
-import './ckeditor.loader';
-import 'ckeditor4';
-
 @Component({
   selector: 'ngx-ckeditor',
   template: `
@@ -11,10 +7,11 @@ import 'ckeditor4';
         CKEditor
       </nb-card-header>
       <nb-card-body>
-        <ckeditor [config]="{ extraPlugins: 'divarea', height: '320' }"></ckeditor>
+        <ckeditor [(ngModel)]="mycontent" [config]="{ extraPlugins: 'divarea', height: '320' }" (change)="0;"></ckeditor>
       </nb-card-body>
     </nb-card>
   `,
 })
 export class CKEditorComponent {
+  mycontent:string;
 }
