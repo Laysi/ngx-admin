@@ -6,7 +6,7 @@ an ngx-admin fork upgrade to angular 15
 
 # Installation notes
 
-To install ngx-admin you have to use NodeJS version 14.14+ because of [node-sass](https://github.com/sass/node-sass) version utilized in the application.
+To install ngx-admin you have to use NodeJS version 16.15+ because of [node-sass](https://github.com/sass/node-sass) version utilized in the application.
 
 # Material theme for ngx-admin
 
@@ -53,7 +53,7 @@ Try low-code internal tool builder for free
 
 ### What's included:
 
-- Angular 13+ & Typescript
+- Angular 15+ & Typescript
 - Bootstrap 4+ & SCSS
 - Responsive layout
 - RTL support
