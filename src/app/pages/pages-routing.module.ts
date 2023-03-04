@@ -5,6 +5,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import loadScript from 'simple-load-script';
 
 const routes: Routes = [{
   path: '',
@@ -55,7 +56,7 @@ const routes: Routes = [{
     },
     {
       path: 'editors',
-      loadChildren: () => import('./editors/editors.module')
+      loadChildren: () => loadScript('https://cdn.ckeditor.com/4.19.1/full-all/ckeditor.js').then(_=>import('./editors/editors.module'))
         .then(m => m.EditorsModule),
     },
     {
